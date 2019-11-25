@@ -36,3 +36,24 @@ def turn(board)
 end
 
 # Define your play method below
+
+def play(board)
+  turns = 3
+  counter = 0
+  loop do
+    counter = counter + 1
+    turn(board)
+    if counter >= turns
+      puts "You only get #{turns} turns"
+    end
+  end
+end
+
+#else ask for input again until you get valid input
+#_________________________________________________
+
+board = ["X"," "," "," "," "," "," "," "," "]
+puts "Welcome to Tic Tac Toe!"
+puts display_board(board)
+#turn(board)
+play(board)
